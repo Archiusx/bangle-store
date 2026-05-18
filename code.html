@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcf9f8;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fcf9f8",
+                        "surface": "#fcf9f8",
+                        "on-primary-container": "#fefcff",
+                        "on-primary-fixed": "#001944",
+                        "surface-variant": "#e5e2e1",
+                        "secondary-container": "#fd661d",
+                        "on-surface": "#1b1c1c",
+                        "background": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "primary": "#0056c3",
+                        "on-primary-fixed-variant": "#004299",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#845000",
+                        "secondary": "#a73a00",
+                        "outline-variant": "#c2c6d6",
+                        "primary-fixed": "#d9e2ff",
+                        "on-secondary-container": "#571b00",
+                        "outline": "#727786",
+                        "on-surface-variant": "#424754",
+                        "on-background": "#1b1c1c",
+                        "inverse-primary": "#afc6ff",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-surface": "#303030",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-fixed-dim": "#ffb866",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "primary-container": "#1f6feb",
+                        "surface-container": "#f0eded",
+                        "secondary-fixed-dim": "#ffb599",
+                        "surface-dim": "#dcd9d9",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdbce",
+                        "on-secondary-fixed-variant": "#7f2b00",
+                        "inverse-on-surface": "#f3f0ef",
+                        "on-tertiary-fixed": "#2b1700",
+                        "tertiary-container": "#a66600",
+                        "surface-tint": "#0059c8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "12px",
+                        "lg": "24px",
+                        "sm": "8px",
+                        "xs": "4px",
+                        "gutter": "16px",
+                        "base": "8px",
+                        "md": "16px",
+                        "margin-desktop": "24px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "label-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "label-sm": ["10px", {"lineHeight": "12px", "fontWeight": "600"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-sm": ["16px", {"lineHeight": "24px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface">
+<!-- TopNavBar -->
+<header class="bg-primary sticky top-0 w-full z-50 shadow-md">
+<div class="max-w-[1240px] mx-auto px-margin-desktop py-base flex items-center justify-between">
+<div class="flex items-center gap-xl">
+<span class="font-headline-lg text-headline-lg font-bold text-on-primary">Sangcollection</span>
+<div class="relative hidden lg:block w-96">
+<input class="w-full bg-on-primary text-on-surface py-2 px-md pr-10 rounded-lg border-none focus:ring-2 focus:ring-secondary-container placeholder:text-outline" placeholder="Search for gold bangles, sets..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary cursor-pointer">search</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors" href="#">Bangles</a>
+<a class="font-label-lg text-label-lg border-b-2 border-secondary-container text-on-primary font-bold pb-1" href="#">Gold</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors" href="#">Silver</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors" href="#">Bridal</a>
+<a class="font-label-lg text-label-lg text-on-primary/80 hover:text-on-primary transition-colors" href="#">Offers</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="bg-secondary-container text-on-primary px-lg py-1.5 font-bold rounded-lg hover:bg-secondary-fixed transition-all active:scale-95">Login</button>
+<div class="flex items-center gap-base text-on-primary">
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-fixed-variant/10 p-2 rounded-full">favorite</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-fixed-variant/10 p-2 rounded-full">shopping_cart</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1240px] mx-auto flex flex-col md:flex-row gap-gutter py-xl px-margin-desktop">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-72 flex-shrink-0">
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl shadow-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-lg">Filters</h2>
+<!-- Category Section -->
+<div class="mb-xl">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md">Categories</h3>
+<ul class="space-y-sm">
+<li class="flex items-center gap-base text-primary font-bold">
+<span class="material-symbols-outlined text-md">chevron_left</span>
+<span class="font-body-md text-body-md">Gold Bangles</span>
+</li>
+</ul>
+</div>
+<!-- Price Range -->
+<div class="mb-xl pb-xl border-b border-outline-variant">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md">Price Range</h3>
+<div class="space-y-md">
+<input class="w-full accent-primary" max="500000" min="10000" type="range"/>
+<div class="flex items-center justify-between gap-sm">
+<select class="w-full bg-surface-container text-body-sm border-outline-variant rounded-lg">
+<option>Min ₹10,000</option>
+</select>
+<span class="text-on-surface-variant">to</span>
+<select class="w-full bg-surface-container text-body-sm border-outline-variant rounded-lg">
+<option>Max ₹5L+</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Material Filter -->
+<div class="mb-xl pb-xl border-b border-outline-variant">
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md">Purity</h3>
+<div class="space-y-sm">
+<label class="flex items-center gap-md cursor-pointer group">
+<input checked="" class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">22kt Gold</span>
+</label>
+<label class="flex items-center gap-md cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">24kt Gold</span>
+</label>
+<label class="flex items-center gap-md cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">18kt Rose Gold</span>
+</label>
+</div>
+</div>
+<!-- Discount Filter -->
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface-variant uppercase tracking-wider mb-md">Discount</h3>
+<div class="space-y-sm">
+<label class="flex items-center gap-md cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">30% or more</span>
+</label>
+<label class="flex items-center gap-md cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">20% or more</span>
+</label>
+<label class="flex items-center gap-md cursor-pointer group">
+<input class="rounded border-outline text-primary focus:ring-primary" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface group-hover:text-primary transition-colors">10% or more</span>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Content -->
+<section class="flex-1">
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl mb-md">
+<nav class="flex items-center gap-xs text-body-sm text-on-surface-variant mb-md">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Jewellery</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-bold text-on-surface">Gold Bangles</span>
+</nav>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<h1 class="font-headline-md text-headline-md text-on-surface">Gold Bangles <span class="text-body-md font-normal text-on-surface-variant">(42 items found)</span></h1>
+<div class="flex items-center gap-lg">
+<span class="font-label-lg text-label-lg font-bold border-b-2 border-primary text-primary pb-1 cursor-pointer">Popularity</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary cursor-pointer">Price: Low to High</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary cursor-pointer">Price: High to Low</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary cursor-pointer">New Arrivals</span>
+</div>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Luxury Gold Bangle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A macro photograph of an exquisite 22-karat solid gold bangle with intricate traditional Indian filigree patterns. The lighting is soft and warm, highlighting the polished golden surface against a neutral, high-end white background. The shot is detailed, showcasing the master craftsmanship and delicate texture of the jewelry in a clean, commercial studio style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVsgBDH4WxyOagiXlCZQd8RziF_8r3NNiX5mFS9b4_0t3rsJ1_Wm_wLixSOhwyEduLzgU_9uOd2RJdR35GeqhaWH7Zk5jCL8C0zQc5Y6-YktYaU89pVy8FomAETOGx-S1V2rNw6WUoyRZyDSSAQLydc8XJbZhoSu7b5OizCyyG-GdZ3NWOVINmPROB8iLE5L_gK1VHqGeuN8M0j9Gut6tSdnZ9UcCwj7Qs1ic0AHU6iDSEyVctLMtGaX0b6ZPCNB_ylME_LU06tMs"/>
+<button class="absolute top-md right-md bg-surface-container-lowest/80 backdrop-blur-sm p-base rounded-full shadow-sm text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-base left-base bg-tertiary-container text-on-tertiary px-sm py-xs rounded text-label-sm font-bold">TOP RATED</div>
+</div>
+<div class="p-md">
+<h3 class="font-body-md text-body-md text-on-surface-variant truncate mb-xs">Traditional Floral Antique Bangle</h3>
+<div class="flex items-center gap-xs mb-md">
+<div class="flex bg-secondary-container text-on-primary px-xs rounded items-center gap-[2px]">
+<span class="font-label-sm text-label-sm">4.8</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">(1,240)</span>
+</div>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹74,999</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹89,999</span>
+<span class="font-label-md text-label-md text-secondary">16% off</span>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-2 rounded font-bold uppercase tracking-wide hover:bg-secondary transition-colors active:scale-95">Add to Cart</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Modern Gold Bangle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek, modern 18k rose gold bangle with a minimalist design featuring a single polished diamond accent. The jewelry is presented in a bright, airy studio setting with elegant soft-focus lighting that emphasizes the smooth curves and luxurious metallic sheen. The aesthetic is sophisticated and high-fashion, appealing to a contemporary luxury consumer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrQUpBJ-WSn4ORaLiRrM7j1SdXfnE0qhwfGY3dx54NsNbK9kcNnJsLtmZ-YXRe--tornZ3fqdqDNoPSkD0xesvi9nWbwvT63LKU2hq1sndl1O1Q5syr_s1GLq1sHt_wOfik1fvsBxfIJLXQNW-877gCo5dHTS-ZT_L19Zvi8GoKIxevw84DCY6lG6Kbsu2ISB3vJZpHFfBFu9-g6ovHI3leUMwSWgW14D6adaJdLh1v1ZZj--daA77u_1TfOW1tFUW6svI1BXBJ1k"/>
+<button class="absolute top-md right-md bg-surface-container-lowest/80 backdrop-blur-sm p-base rounded-full shadow-sm text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-md">
+<h3 class="font-body-md text-body-md text-on-surface-variant truncate mb-xs">Modern Sleek Daily Wear Bangle</h3>
+<div class="flex items-center gap-xs mb-md">
+<div class="flex bg-secondary-container text-on-primary px-xs rounded items-center gap-[2px]">
+<span class="font-label-sm text-label-sm">4.5</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">(856)</span>
+</div>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹42,500</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹48,000</span>
+<span class="font-label-md text-label-md text-secondary">11% off</span>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-2 rounded font-bold uppercase tracking-wide hover:bg-secondary transition-colors active:scale-95">Add to Cart</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Bridal Gold Bangle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A pair of heavy, ornate 24k yellow gold bridal bangles featuring intricate temple art and embossed figures of deities. The background is a rich, warm terracotta color that complements the brilliance of the gold. Dramatic, focused lighting creates deep shadows and sparkling highlights, capturing the royal and festive essence of traditional wedding jewelry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDolQTSUJ6BjW2RFi1vxEgZlEJnYe9tQ59yh5qN8WY1ShWW8PA_S6RpG6Tnk1-1iPsXu26cPuSvP8BBK_S94ni2doR0zigpmXfhhgmhWXxmPg1-Kw6k5xXq4-3BJMKzjfuxYIIOvG8bTp5PE68PY175Ox9MVbih7rF1oZpNNtFWErDX-2Eavl1aT5DfbAaZuXnKrP3J6loc_PwmElhQuNkOiFcznDVYgwvrMAqHEaoScrTUlAn093HEcLLmlCZRxR5z-y2xPZkumIk"/>
+<button class="absolute top-md right-md bg-surface-container-lowest/80 backdrop-blur-sm p-base rounded-full shadow-sm text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="absolute bottom-base left-base bg-secondary-container text-on-primary px-sm py-xs rounded text-label-sm font-bold">BEST SELLER</div>
+</div>
+<div class="p-md">
+<h3 class="font-body-md text-body-md text-on-surface-variant truncate mb-xs">Royal Bridal Temple Work Bangle Set</h3>
+<div class="flex items-center gap-xs mb-md">
+<div class="flex bg-secondary-container text-on-primary px-xs rounded items-center gap-[2px]">
+<span class="font-label-sm text-label-sm">4.9</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">(3,102)</span>
+</div>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹2,15,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹2,80,000</span>
+<span class="font-label-md text-label-md text-secondary">23% off</span>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-2 rounded font-bold uppercase tracking-wide hover:bg-secondary transition-colors active:scale-95">Add to Cart</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Diamond Gold Bangle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up of a premium gold bangle encrusted with shimmering pave diamonds along its outer edge. The image is shot from a low angle on a reflective dark marble surface, creating a mirror effect. The lighting is crisp and cool-toned, making the diamonds sparkle brilliantly. The overall feel is one of extreme luxury, wealth, and timeless elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtcwu_j9BkE9zKI_BaPd1I6PY2n38vO3YYWtxNL0tVlV5PFUnKTQG5JMl1UH5TtUGlFbzr0-XiCFm90foQ4A8KnYryxoLCAq_OTge_h_albXe0CTdmmb2IrmcCGjeoZ0Ts07QyeK1bxuB_8ua9jKu6Jh2n_7LA4BNWH-EJNr3jnOFM4PIxJumVGKroh4kviS2A_Ts6GeRIbIjXhbNirAUTV7WA5T6TLfPSCl3XjVztN9ufeqtSbXu0GjURIwqnzM-KKfFiawxHf8A"/>
+<button class="absolute top-md right-md bg-surface-container-lowest/80 backdrop-blur-sm p-base rounded-full shadow-sm text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-md">
+<h3 class="font-body-md text-body-md text-on-surface-variant truncate mb-xs">Diamond Encrusted Eternity Bangle</h3>
+<div class="flex items-center gap-xs mb-md">
+<div class="flex bg-secondary-container text-on-primary px-xs rounded items-center gap-[2px]">
+<span class="font-label-sm text-label-sm">4.7</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">(421)</span>
+</div>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹1,20,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹1,45,000</span>
+<span class="font-label-md text-label-md text-secondary">17% off</span>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-2 rounded font-bold uppercase tracking-wide hover:bg-secondary transition-colors active:scale-95">Add to Cart</button>
+</div>
+</div>
+<!-- Repeat for additional items -->
+<!-- Product Card 5 -->
+<div class="group bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-square overflow-hidden bg-surface-container-low">
+<img alt="Polished Gold Bangle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Two interlocking gold bangles with a high-polish finish resting on a soft beige silk cloth. The scene is illuminated by natural, diffused window light that creates soft highlights and subtle shadows. The aesthetic is minimal, warm, and comforting, emphasizing the tactile quality of the jewelry and the richness of the gold against the fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqcV5rHwitZGJ96-iU4ZnsC99hz8QwVs3wZwHI32Xdg8zaMRJKTeVqUJpJvrsYQSUeAZ34WhNPD4RuWk6OPiJD0kdQwjw8Us5eZgliaIWMFGzzr0ioV5vjnGzy6hIIe3mLnoBw7BpoavQ3clHQH7UWy03ftbbK8KH973UJSgcu80BiBHcKcKcrVzgxehOn7Iae4iIhQdQmvab6BfGR4iOzaX2vktmF67z3I4cg-E1hnk8w_TWsA50-ewu6i6n832g0U7YH7FvmqxU"/>
+<button class="absolute top-md right-md bg-surface-container-lowest/80 backdrop-blur-sm p-base rounded-full shadow-sm text-outline-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-md">
+<h3 class="font-body-md text-body-md text-on-surface-variant truncate mb-xs">Interlocking Twin Gold Bangles</h3>
+<div class="flex items-center gap-xs mb-md">
+<div class="flex bg-secondary-container text-on-primary px-xs rounded items-center gap-[2px]">
+<span class="font-label-sm text-label-sm">4.4</span>
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-body-sm text-on-surface-variant">(112)</span>
+</div>
+<div class="flex items-baseline gap-sm mb-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹58,700</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">₹65,000</span>
+<span class="font-label-md text-label-md text-secondary">9% off</span>
+</div>
+<button class="w-full bg-secondary-container text-on-primary py-2 rounded font-bold uppercase tracking-wide hover:bg-secondary transition-colors active:scale-95">Add to Cart</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex items-center justify-center gap-base">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">3</button>
+<span class="px-base">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">10</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant">
+<div class="max-w-[1240px] mx-auto py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-md">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Sangcollection</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Elevating traditions since 1985. We specialize in the finest gold and diamond jewelry for the modern woman who values heritage and style.</p>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">photo_camera</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">movie</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="space-y-sm">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-base">Support</h4>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Returns Policy</a>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Shipping Info</a>
+</div>
+<div class="space-y-sm">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mb-base">Company</h4>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="block font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="space-y-md">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Stay Updated</h4>
+<div class="flex gap-xs">
+<input class="flex-1 bg-surface-container text-body-sm border-outline-variant rounded-lg px-md focus:ring-primary" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-on-primary px-md py-2 rounded-lg font-bold">Join</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Sangcollection Retailers. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
