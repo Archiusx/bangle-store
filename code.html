@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | SANG COLLECTION</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "primary": "#000000",
+                        "on-secondary-container": "#616363",
+                        "on-primary-fixed": "#1b1b1b",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "primary-container": "#1b1b1b",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#848484",
+                        "on-surface-variant": "#4c4546",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "secondary-container": "#dfe0e0",
+                        "surface": "#fbf9f9",
+                        "inverse-surface": "#303031",
+                        "background": "#fbf9f9",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-fixed": "#1b1b1b",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fbf9f9",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-container": "#efeded",
+                        "outline-variant": "#cfc4c5",
+                        "surface-container-highest": "#e3e2e2",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#5d5f5f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-background": "#1b1c1c",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-variant": "#e3e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dbdad9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "tertiary-container": "#1b1b1b",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#454747",
+                        "tertiary-fixed": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c6c6c6",
+                        "on-primary-container": "#848484"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-padding-mobile": "20px",
+                        "container-padding-desktop": "80px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-background/80 backdrop-blur-xl flex justify-between items-center px-container-padding-desktop py-unit max-w-full">
+<div class="font-display-lg text-headline-md uppercase tracking-widest text-primary dark:text-on-background">SANG</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">New Arrivals</a>
+<a class="font-label-caps text-label-caps text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors duration-300" href="#">Heritage</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-on-background border-b border-primary dark:border-on-background pb-1" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity duration-300 scale-95 active:scale-90">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 scale-95 active:scale-90">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full overflow-hidden flex items-center justify-center">
+<img alt="Our Heritage" class="absolute inset-0 w-full h-full object-cover grayscale brightness-75" data-alt="A profound close-up shot of intricate Kashmiri embroidery with fine silver threads on deep charcoal wool. The lighting is dramatic and directional, highlighting the tactile texture of the hand-crafted fabric. The composition is artistic and editorial, reflecting the luxury and heritage of high-fashion textiles. The overall mood is somber yet prestigious, sticking to a monochrome and sophisticated aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV_8pjXd1bBesrGqpriTfUCW9ac7aLzAvrYgglsjauTiwLyeonojOY1naorjqU69MZcbW8MguxbqQM5H_Olk0QKT7_E47fFnUCcacXuEp2reuUjKERjJFRyd-e39tVVldif2bUZpDWN1dgyTTyFKbN-eDqeKtEK1Wux10n2gGdnZuGZ6-lLS7V5ZLMOYyExd1jJjRZBRg_19gMZz5Y_z1-Zm9Aez-9-fqc40OLBDEcdUhpIjXhhsZAaxSf_MG2a6DHzSd8HxNObXY"/>
+<div class="relative z-10 text-center px-container-padding-mobile">
+<h1 class="font-display-lg text-white text-[12vw] md:text-[8vw] leading-none uppercase tracking-tighter opacity-90">Our Heritage</h1>
+</div>
+</section>
+<!-- Brand Story -->
+<section class="py-section-gap px-container-padding-desktop max-w-7xl mx-auto text-center">
+<p class="font-headline-md text-headline-md text-primary max-w-4xl mx-auto leading-relaxed italic">
+                “Sang Collection celebrates the beauty of Indian craftsmanship blended with modern fashion aesthetics. Inspired by Kashmiri artistry, desi romance, and contemporary ethnic culture, we create statement pieces designed for modern women who love tradition with confidence.”
+            </p>
+<div class="mt-16 flex justify-center">
+<div class="h-20 w-[1px] bg-primary/20"></div>
+</div>
+</section>
+<!-- The Art of Kashmiri Elegance (Bento/Editorial Grid) -->
+<section class="px-container-padding-desktop pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 space-y-unit">
+<span class="font-label-caps text-label-caps text-secondary uppercase">The Craft</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Art of Kashmiri Elegance</h2>
+<p class="font-body-lg text-body-lg text-secondary pt-4">
+                        Every thread tells a story of survival and beauty. Our artisans in the heart of Srinagar preserve centuries-old techniques, hand-weaving pashmina and silk with a precision that defies the fast-fashion era. It is a slow, meditative process where a single shawl can take months to perfect.
+                    </p>
+</div>
+<div class="md:col-span-7 flex flex-col md:flex-row gap-gutter mt-8 md:mt-0">
+<div class="flex-1 overflow-hidden editorial-shadow rounded-lg aspect-[3/4]">
+<img alt="Kashmiri Elegance" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 grayscale" data-alt="Detailed macro photography of silver artisan jewelry featuring traditional Kashmiri motifs. The jewelry is resting on a textured white marble surface under soft, diffused morning light. The high-contrast black and white photography emphasizes the fine carvings and polished finish of the piece. The aesthetic is clean, minimalist, and exudes high-end luxury fashion boutique vibes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyk7Pb_0ZhB3dFT0b4juSPhBaFsrylTlxI_z77wYex-laWJUeizvtuT3zYyvyN0cjI8R9i7yB6VXNs8sd595p0QyV2ykqq_79I7XCSnGs7auhM4wiSm3km7Dm3nQxDqDQoAeKjnvSw-OKbb3_suHftMXEBi374iS21lw5tY_jp_prg5vS4RMXEo5LCTQOLMAS_gajH20goVbQYs9iyHmlp1MHe1ND8EYgSkJMMifg6o7GmGMkkTz0btBVxXpTnCNczwYJGjO9RDaY"/>
+</div>
+<div class="flex-1 overflow-hidden editorial-shadow rounded-lg aspect-[3/4] md:mt-24">
+<img alt="Handmade Detail" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 grayscale" data-alt="A portrait of a skilled artisan's weathered hands working on a traditional handloom. The lighting is atmospheric, capturing dust motes in the air and the sharp focus on the rhythmic movement of weaving. The background is a rustic, dark workshop that provides a stark contrast to the white fibers being woven. The image is captured in a timeless monochrome style suitable for an editorial magazine." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiLNNQ9kNlbfteC_ahZnaVGmGCTx3wDNGl8IJmqJhZyijvd_-Roo4QphmFAHf45UbNar7ZD70ssyrOA5zyIeR_mw5jo76BKOB1QZu_Pxq4Ngc7Bs8y2j2f90UASnsBIV2ZYQib4DvwPzi-6SMDcCWYDJA1DVBR2ALWFm3bcA5OLeCww0HYQT58wOEWERksQMXvv4kWd_1v6B4xH5fIChCleTPmRLbr5zqq5k6VEzVxNYU3Njy21WXPaqDS6RmPA9Oyb57zHVQlD7w"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Designed for Modern Souls (Asymmetric Layout) -->
+<section class="bg-surface-container py-section-gap">
+<div class="px-container-padding-desktop max-w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
+<div class="order-2 md:order-1 relative h-[600px] rounded-xl overflow-hidden editorial-shadow">
+<img alt="Modern Soul" class="w-full h-full object-cover grayscale" data-alt="A high-fashion editorial shot of a woman in a contemporary fusion outfit, blending traditional ethnic patterns with modern tailoring. She is posing in a stark, brutalist architectural setting with sharp shadows and bright highlights. The lighting is intense and high-key, creating a clean and avant-garde fashion look. The color palette is strictly black and white, emphasizing form and texture over color." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ21DVcBugeK7Fopp1hX3P7qJEDPfb-j9WQc1IP8Z2pZpjPwmj6RRtXBbyDuheKBkWKrzQ2WXbD4A0AAi5Vb931fzZxSN6cEOfsQ9U3UfvRF1s-JS2kDRItZIDPPLGvzZnm7r8iEH_INnCcZfSc7sCQLfvC9UB7WZ1Y7nWnMMmXQD2ALeE_fSlPZn2REvT864uTnQhrfv6EnNB20obYREcXIE233fRA8s0iPj2cop3odbYkfaUg0XLMkyPGzNr9JdFzD1qpS7zMHk"/>
+</div>
+<div class="order-1 md:order-2 space-y-unit max-w-lg">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Evolution</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Designed for Modern Souls</h2>
+<p class="font-body-lg text-body-lg text-secondary pt-4">
+                            Tradition isn't a museum piece; it's a living, breathing pulse. We redefine ethnic wear by stripping away the unnecessary and focusing on silhouette, drape, and the raw emotion of the fabric. Sang pieces are made for the boardroom, the gala, and the quiet moments of self-expression.
+                        </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 uppercase hover:opacity-80 transition-opacity">Explore Collection</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Commitment -->
+<section class="py-section-gap px-container-padding-desktop">
+<div class="max-w-4xl mx-auto text-center space-y-8">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Our Promise</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Commitment</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-12 text-left">
+<div class="p-unit space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Authenticity</h3>
+<p class="font-body-md text-body-md text-secondary">Sourced directly from artisan clusters with verified heritage credentials.</p>
+</div>
+<div class="p-unit space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Quality</h3>
+<p class="font-body-md text-body-md text-secondary">Every piece undergoes a rigorous triple-check process for weave density and finish.</p>
+</div>
+<div class="p-unit space-y-4">
+<h3 class="font-headline-md text-headline-md text-primary">Sustainability</h3>
+<p class="font-body-md text-body-md text-secondary">Prioritizing natural dyes and small-batch production to minimize environmental footprint.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Floating Action Buttons -->
+<div class="fixed bottom-10 right-container-padding-desktop z-[70] flex flex-col gap-4">
+<button class="glass w-14 h-14 rounded-full flex items-center justify-center editorial-shadow hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="favorite">favorite</span>
+</button>
+<button class="glass w-14 h-14 rounded-full flex items-center justify-center editorial-shadow hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="glass w-14 h-14 rounded-full flex items-center justify-center editorial-shadow hover:scale-110 transition-transform">
+<svg class="w-6 h-6 text-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</button>
+<button class="glass w-14 h-14 rounded-full flex items-center justify-center editorial-shadow hover:scale-110 transition-transform">
+<svg class="w-6 h-6 text-primary" fill="currentColor" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412 0 6.556-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.223-3.694c1.57.933 3.109 1.458 4.755 1.459 5.479 0 9.936-4.457 9.937-9.935 0-2.657-1.035-5.155-2.914-7.034-1.879-1.878-4.377-2.913-7.035-2.913-5.483 0-9.94 4.457-9.94 9.935-.001 1.724.463 3.411 1.34 4.887l-1.054 3.848 3.951-1.037zm10.287-7.01c-.282-.141-1.664-.822-1.923-.916-.258-.094-.446-.141-.634.141-.188.282-.728.916-.892 1.104-.164.188-.329.212-.611.071-.282-.141-1.189-.438-2.264-1.398-.836-.745-1.4-1.666-1.564-1.948-.164-.282-.018-.435.122-.574.127-.125.282-.329.423-.494.141-.164.188-.282.282-.47.094-.188.047-.353-.024-.494-.071-.141-.634-1.528-.869-2.092-.229-.551-.462-.476-.634-.485-.164-.008-.353-.01-.541-.01s-.494.071-.753.353c-.258.282-.987.964-.987 2.35s1.011 2.726 1.152 2.914c.141.188 1.989 3.045 4.819 4.263.673.291 1.2.464 1.611.594.676.214 1.291.184 1.777.111.541-.082 1.664-.681 1.899-1.34.235-.658.235-1.222.164-1.34-.071-.118-.258-.188-.541-.329z"></path></svg>
+</button>
+</div>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-primary dark:bg-inverse-surface grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding-desktop py-section-gap text-on-primary dark:text-inverse-on-surface">
+<div class="col-span-1">
+<div class="font-display-lg text-headline-lg text-on-primary">SANG</div>
+<p class="font-body-md text-body-md mt-6 opacity-60">Curating stories of Indian elegance for the global modern soul.</p>
+</div>
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps">Shop</h4>
+<ul class="space-y-2 opacity-80">
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Collections</a></li>
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Jewelry</a></li>
+</ul>
+</div>
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps">Client Care</h4>
+<ul class="space-y-2 opacity-80">
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div class="col-span-1 space-y-4">
+<h4 class="font-label-caps text-label-caps">Legal</h4>
+<ul class="space-y-2 opacity-80">
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md hover:text-on-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+<div class="pt-8">
+<p class="font-body-md text-body-md opacity-40">© 2024 SANG COLLECTION. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>
